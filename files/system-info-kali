@@ -1,0 +1,113 @@
+#!/bin/bash/gdthehacker
+
+#color codes
+GRY='\033[1;30m'
+RED='\033[0;31m'
+BLU='\033[0;34m'
+GRN='\033[0;32m'
+PUL='\033[0;35m'
+RST='\033[0m'
+
+
+
+
+#clear
+echo ""
+echo ""
+echo -e $RED" ["$BLU" 𝐘𝐎𝐔𝐑 𝐒𝐘𝐒𝐓𝐄𝐌 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍 "$RED"] "
+echo ""
+echo ""
+# Display login information for users
+echo -e $RED " Login Information"
+echo ""
+echo -e $GRN ""
+whoami
+echo ""
+echo ""
+echo ""
+echo ""
+# Display system information
+echo -e $RED " System Information"
+echo ""
+echo -e $GRN""
+uname -a
+echo ""
+echo ""
+echo ""
+echo ""
+# Display kernel version
+echo -e $RED " Kernel Version"
+echo ""
+echo -e $GRN ""
+uname -r
+echo ""
+echo ""
+echo ""
+echo ""
+# Display operating system name and version
+echo -e $RED " Operating System"
+echo ""
+echo -e $GRN ""
+cat /etc/os-release
+echo ""
+echo ""
+echo ""
+echo ""
+# Display disk usage information
+echo -e $RED " Disk Usage"
+echo ""
+echo -e $GRN ""
+df -h
+echo ""
+echo ""
+echo ""
+echo ""
+# Display memory usage information
+echo -e $RED " Memory Usage"
+echo ""
+echo -e $GRN ""
+free -h
+echo ""
+echo ""
+echo ""
+echo ""
+# Display CPU information
+echo -e $RED " CPU Information"
+echo ""
+echo -e $GRN ""
+lscpu
+echo ""
+echo ""
+echo ""
+echo ""
+# Display network interfaces and their configuration
+echo -e $RED " Network Interfaces"
+echo ""
+echo -e $GRN ""
+ifconfig
+echo ""
+echo ""
+echo ""
+echo ""
+# Display routing table
+echo -e $RED " Routing Table"
+echo ""
+echo -e $GRN ""
+netstat -r
+echo ""
+echo ""
+echo ""
+echo ""
+# Display list of installed packages
+#echo -e $RED " Installed Packages"
+#dpkg --list
+
+# Display list of running processes
+echo -e $RED " Running Processes"
+echo ""
+echo -e $GRN ""
+ps aux
+echo ""
+echo ""
+#echo ""
+

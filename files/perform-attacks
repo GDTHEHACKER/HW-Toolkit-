@@ -1,0 +1,180 @@
+#!/bin/bash/gdthehacker
+
+clear
+
+# 𝐇𝐖-𝐓𝐎𝐎𝐋𝐊𝐈𝐓 - A multi-option hacking toolkit for Termux
+
+#color codes for styling
+GRY='\033[1;30m'
+RED='\033[0;31m'
+BLU='\033[0;34m'
+GRN='\033[0;32m'
+PUL='\033[0;35m'
+YEL="\033[33m"
+MAGENTA="\033[35m"
+CYAN="\033[36m"
+WHITE="\033[37m"
+RST='\033[0m'
+
+###########################################################
+
+# Define background colors
+BG_RED="\033[41m"
+BG_GREEN="\033[42m"
+BG_YELLOW="\033[43m"
+BG_BLUE="\033[44m"
+BG_MAGENTA="\033[45m"
+BG_CYAN="\033[46m"
+BG_WHITE="\033[47m"
+BG_BLACK='\033[40m'
+
+# Function to nmap scanning
+nmap_scan() {
+     echo ""
+     echo -e $RED ""
+     read -p "Enter the target IP range : " ip_add
+     echo -e $GRN ""
+     nmap -sT $ip_add
+}
+
+brute_force() {
+        echo ""
+        echo -e $RED ""
+        read -p "Enter the username : " username
+        echo ""
+        read -p "Enter the password list : " password_list
+        echo ""
+        read -p "Enter the target : " target
+        echo -e $GRN ""
+        hydra -l $username -P $password_list $target
+        echo ""
+}
+
+sql_injection() {
+          echo ""
+          echo -e $RED ""
+          read -p "Enter the target URL : " url
+          echo -e $GRN ""
+          sqlmap -u $url --dbs
+}
+
+web_vuln_scan() {
+          echo ""
+          echo -e $RED ""
+          read -p "Enter the target URL : " url
+          echo -e $GRN ""
+          nikto -h $url
+}
+
+dir_brute_force() {
+#         clear
+          echo ""
+          echo -e $YEL ""
+          read -p "Enter the target URL : " url
+          echo -e $YEL ""
+          read -p "Enter Passwordlist path : " plist
+          echo -e $RED ""
+          dirb $url $plist
+          echo ""
+}
+
+
+main_menu() {
+          sleep 1s
+          bash HW-Toolkit.sh
+}
+
+exit_tool() {
+         sleep 1s
+         echo -e $RED ""
+         echo "                                 Existing..." | pv -qL 30
+         sleep 1s
+         echo -e $CYAN ""
+         echo "                              Ok Bye Dear... 😇" | pv -qL 30
+         sleep 1s
+         exit 1 ; exit 0
+echo ""
+
+}
+
+#Menu Of A Tool
+
+display_menu() {
+
+echo -e $GRN ""
+
+echo ""
+echo "                         ██╗  ██╗      ██╗    ██╗ "
+echo "                         ██║  ██║      ██║    ██║ "
+echo "                         ███████║█████╗██║ █╗ ██║ "
+echo "                         ██╔══██║╚════╝██║███╗██║ "
+echo "                         ██║  ██║      ╚███╔███╔╝ "
+echo "                         ╚═╝  ╚═╝       ╚══╝╚══╝ "
+echo -e $GRY"                                [ ⚔️ 🛡 ⚔️ ]"
+echo -e $RED ""
+echo "        █████╗ ████████╗████████╗ █████╗  ██████╗██╗  ██╗███████╗ "
+echo "       ██╔══██╗╚══██╔══╝╚══██╔══╝██╔══██╗██╔════╝██║ ██╔╝██╔════╝ "
+echo "       ███████║   ██║      ██║   ███████║██║     █████╔╝ ███████╗ "
+echo "       ██╔══██║   ██║      ██║   ██╔══██║██║     ██╔═██╗ ╚════██║ "
+echo "       ██║  ██║   ██║      ██║   ██║  ██║╚██████╗██║  ██╗███████║ "
+echo "       ╚═╝  ╚═╝   ╚═╝      ╚═╝   ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝ "
+echo -e $WHITE "                      [ 💻 ] 𝗔𝗨𝗧𝗛𝗢𝗥 :" $YEL "@GDTHEHACKER " | pv -qL 35
+echo -e $GRY ""
+
+
+echo ""
+echo -e $GRY ""
+echo -e $RED " ["$WHITE" 1. "$RED"]"$GRN"  𝗦𝗰𝗮𝗻 𝗡𝗲𝘁𝘄𝗼𝗿𝗸 𝗪𝗶𝘁𝗵 𝗡𝗺𝗮𝗽 "
+echo ""
+echo ""
+echo -e $RED " ["$WHITE" 2. "$RED"]"$GRN"  𝗣𝗲𝗿𝗳𝗼𝗿𝗺 𝗕𝗿𝘂𝘁𝗲 𝗙𝗼𝗿𝗰𝗲 𝗔𝘁𝘁𝗮𝗰𝗸 𝗪𝗶𝘁𝗵 𝗛𝘆𝗱𝗿𝗮 "
+echo ""
+echo ""
+echo -e $RED " ["$WHITE" 3. "$RED"]"$GRN"  𝗣𝗲𝗿𝗳𝗼𝗿𝗺 𝗦𝗤𝗟 𝗜𝗻𝗷𝗲𝗰𝘁𝗶𝗼𝗻 𝗧𝗲𝘀𝘁𝗶𝗻𝗴 𝗪𝗶𝘁𝗵 𝗦𝗤𝗟𝗠𝗔𝗣"
+echo ""
+echo ""
+echo -e $RED " ["$WHITE" 4. "$RED"]"$GRN"  𝐏𝐞𝐫𝐟𝐨𝐫𝐦 𝐰𝐞𝐛 𝐯𝐮𝐥𝐧𝐞𝐫𝐚𝐛𝐢𝐥𝐢𝐭𝐲 𝐬𝐜𝐚𝐧 𝐰𝐢𝐭𝐡 𝐍𝐢𝐤𝐭𝐨 "
+echo ""
+echo ""
+echo -e $RED " ["$WHITE" 5. "$RED"]"$GRN"  𝐏𝐞𝐫𝐟𝐨𝐫𝐦 𝐝𝐢𝐫𝐞𝐜𝐭𝐨𝐫𝐲 𝐛𝐫𝐮𝐭𝐞 𝐟𝐨𝐫𝐜𝐞 𝐚𝐭𝐭𝐚𝐜𝐤 𝐰𝐢𝐭𝐡 𝐃𝐢𝐫𝐛 "
+echo ""
+echo ""
+echo -e $RED " ["$WHITE" 0. "$RED"]"$GRN"  𝐁𝐀𝐂𝐊 𝐓𝐎 𝐌𝐀𝐈𝐍 𝐌𝐄𝐍𝐔 "
+echo ""
+echo ""
+echo -e $RED"  ["$WHITE" 00."$RED"]"$GRN"  𝐄𝐗𝐈𝐓 "
+echo ""
+
+}
+
+echo -e $BLU ""
+
+
+# Get user input
+
+while true; do
+display_menu
+
+echo ""
+echo -e $BLU ""
+read -p "  [ 🌐 ]  Enter your choice : " choice
+
+echo -e $WHITE ""
+
+# Execute the chosen function
+
+case $choice in
+
+    1)  nmap_scan ;;
+    2)  brute_force ;;
+    3)  sql_injection ;;
+    4)  web_vuln_scan ;;
+    5)  dir_brute_force ;;
+    0)  main_menu ;;
+    00) exit_tool ;;
+    *) echo -e $MAGENTA "Invalid choice. Please try again." ;;
+esac
+    echo -e $CYAN ""
+    read -p "  𝐏ress 𝐄nter 𝐓o 𝐂ontinue..."
+    clear
+done

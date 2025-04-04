@@ -1,0 +1,315 @@
+#!/bin/bash/gdthehacker
+
+# HW-Toolkit - A hacking toolkit
+
+clear
+
+###########################################################
+###########################################################
+
+#color codes for styling
+
+GRY='\033[1;30m'
+RED='\033[0;31m'
+BLU='\033[0;34m'
+GRN='\033[0;32m'
+PUL='\033[0;35m'
+YEL="\033[33m"
+MAGENTA="\033[35m"
+CYAN="\033[36m"
+WHITE="\033[97m"
+RST='\033[0m'
+
+###########################################################
+
+# Define background colors
+
+BG_RED="\033[41m"
+BG_GREEN="\033[42m"
+BG_YELLOW="\033[43m"
+BG_BLUE="\033[44m"
+BG_MAGENTA="\033[45m"
+BG_CYAN="\033[46m"
+BG_WHITE="\033[47m"
+BG_BLACK='\033[40m'
+
+###########################################################
+###########################################################
+
+
+
+# Function to update and upgrade Termux packages
+
+update_system() {
+    echo -e $RED "Updating and upgrading Termux packages..."
+    echo -e $GRN  ""
+    pkg update && pkg upgrade -y ; apt update && apt upgrade -y
+    echo -e $YEL "System update completed."
+}
+
+# Function to install Nmap
+install_nmap() {
+    echo -e $RED "Installing Nmap..."
+    echo -e $GRN ""
+    pkg install nmap -y ; apt install nmap -y
+    echo -e $YEL ""
+    echo "Nmap installed successfully."
+}
+
+# Function to install Metasploit
+install_metasploit() {
+    echo -e $RED "Installing Metasploit..."
+    echo -e $GRN ""
+    pkg install metasploit -y ; apt install metasploit -y
+    echo -e $YEL "Metasploit installed successfully."
+}
+
+# Function to install Hydra
+install_hydra() {
+    echo -e $RED "Installing Hydra..."
+    echo -e $GRN ""
+    pkg install hydra -y ; apt install hydra -y
+    echo -e $YEL "Hydra installed successfully."
+}
+
+# Function to install SQLMap
+install_sqlmap() {
+    echo -e $RED "Installing SQLMap..."
+    echo -e $GRN ""
+    pkg install sqlmap -y ; apt install sqlmap -y
+    echo -e $YEL "SQLMap installed successfully."
+}
+
+# Function to install Wireshark
+install_wireshark() {
+    echo -e $RED "Installing Wireshark..."
+    echo -e $GRN ""
+    pkg install wireshark -y ; apt install wireshark -y
+    echo -e $YEL "Wireshark installed successfully."
+}
+
+# Function to install Aircrack-ng
+install_aircrack_ng() {
+    echo -e $RED "Installing Aircrack-ng..."
+    echo -e $GRN ""
+    pkg install aircrack-ng -y ; apt install aircrack-ng -y
+    echo -e $YEL "Aircrack-ng installed successfully."
+}
+
+# Function to install Nikto
+install_nikto() {
+    echo -e $RED "Installing Nikto..."
+    echo -e $GRN ""
+    pkg install nikto -y ; apt install nikto -y
+    echo -e $YEL "Nikto installed successfully."
+}
+
+# Function to install John the Ripper
+install_john() {
+    echo -e $RED "Installing John the Ripper..."
+    echo -e $GRN ""
+    pkg install john -y ; apt install john -y
+    echo -e $YEL "John the Ripper installed successfully."
+}
+
+# Function to install Dirb
+install_dirb() {
+    echo -e $RED "Installing Dirb..."
+    echo -e $GRN ""
+    pkg install dirb -y ; apt install dirb -y
+    echo -e $YEL "Dirb installed successfully."
+}
+
+# Function to install Gobuster
+install_gobuster() {
+    echo -e $RED "Installing Gobuster..."
+    echo -e $GRN ""
+    pkg install gobuster -y ; apt install gobuster -y
+    echo -e $YEL "Gobuster installed successfully."
+}
+
+# Function to install Recon-ng
+install_recon_ng() {
+    echo -e $RED "Installing Recon-ng..."
+    echo -e $GRN ""
+    pkg install recon-ng -y ; apt install recon-ng -y
+    echo -e $YEL "Recon-ng installed successfully."
+}
+
+# Function to install Nikto
+install_sslyze() {
+    echo -e $RED "Installing sslyze..."
+    echo -e $GRN ""
+    pkg install sslyze -y ; apt install sslyze -y
+    echo -e $YEL "sslyze installed successfully."
+}
+
+# Function to install Frida
+install_frida() {
+    echo -e $RED "Installing Frida..."
+    echo -e $GRN ""
+    pkg install frida -y ; apt install frida -y
+    echo -e $YEL "Frida installed successfully."
+}
+
+# Function to install Burp Suite
+install_burp_suite() {
+    echo -e $RED "Installing Burp Suite..."
+    echo -e $GRN ""
+    pkg install burpsuite -y ; apt install burpsuite -y
+    echo -e $YEL "Burp Suite installed successfully."
+}
+
+# Function to install Dirbuster
+install_dirbuster() {
+    echo -e $RED "Installing Dirbuster..."
+    echo -e $GRN ""
+    pkg install dirbuster -y ; apt install dirbuster -y
+    echo -e $YEL "Dirbuster installed successfully."
+}
+
+# Function to install Wfuzz
+install_wfuzz() {
+    echo -e $RED "Installing Wfuzz..."
+    echo -e $GRN ""
+    pkg install wfuzz -y ; apt install wfuzz -y
+    echo -e $YEL "Wfuzz installed successfully."
+}
+
+# Function to install Hashcat
+install_hashcat() {
+    echo -e $RED "Installing Hashcat..."
+    echo -e $GRN ""
+    pkg install hashcat -y ; apt install hashcat -y
+    echo -e $YEL "Hashcat installed successfully."
+}
+
+# Function to install CrackMapExec
+install_crackmapexec() {
+    echo -e $RED "Installing CrackMapExec..."
+    echo -e $GRN ""
+    pkg install crackmapexec -y ; apt install crackmapexec -y
+    echo -e $YEL "CrackMapExec installed successfully."
+}
+
+# Function to install Impacket
+install_impacket() {
+    echo -e $RED "Installing Impacket..."
+    echo -e $GRN ""
+    pkg install impacket -y ; apt install impacket -y
+    echo -e $YEL "Impacket installed successfully."
+}
+
+main_menu() {
+         bash HW-Toolkit.sh
+}
+
+exit_tool() {
+       sleep 1s
+       echo ""
+       echo -e $RED"                          𝚃𝚘𝚘𝚕 𝙴𝚡𝚒𝚝𝚒𝚗𝚐....."
+       echo  ""
+       echo -e $CYAN"                    💻 𝙾𝙺 𝙱𝚈𝙴 𝙳𝙴𝙰𝚁 𝚄𝚂𝙴𝚁....😊🤗" | pv -qL 35
+       echo ""
+       exit 0
+}
+
+# Main menu
+
+display_menu() {
+
+echo -e $RED ""
+
+echo -e $RED ""
+
+echo ""
+echo "                ████████╗ ██████╗  ██████╗ ██╗     ███████╗ "
+echo "                ╚══██╔══╝██╔═══██╗██╔═══██╗██║     ██╔════╝ "
+echo "                   ██║   ██║   ██║██║   ██║██║     ███████╗ "
+echo "                   ██║   ██║   ██║██║   ██║██║     ╚════██║ "
+echo "                   ██║   ╚██████╔╝╚██████╔╝███████╗███████║ "
+echo "                   ╚═╝    ╚═════╝  ╚═════╝ ╚══════╝╚══════╝ "
+echo -e $GRN"                                   [ 📩 ]"
+echo -e $GRN""
+echo "    ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗     ███████╗██████╗  "
+echo "    ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║     ██╔════╝██╔══██╗ "
+echo "    ██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║     █████╗  ██████╔╝ "
+echo "    ██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║     ██╔══╝  ██╔══██╗ "
+echo "    ██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗███████╗██║  ██║ "
+echo "    ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝╚═╝  ╚═╝ "
+echo ""
+
+
+echo -e $WHITE "                       [ 💻 ] 𝗔𝗨𝗧𝗛𝗢𝗥 : "$RED"@GDTHEHACKER" | pv -qL 35
+echo -e $GRY ""
+
+
+#- Main Menu Options"
+
+echo -e $YEL ""
+echo ""
+echo -e $WHITE" [  1. ]"$GRN" Update && upgrade" $WHITE"                 [  2. ]"$GRN" Install Nmap"
+echo ""
+echo -e $WHITE" [  3. ]"$GRN" Install Metasploit"$WHITE"                 [  4. ]"$GRN" Install Hydra"
+echo ""
+echo -e $WHITE" [  5. ]"$GRN" Install SQLMap"$WHITE"                     [  6. ]"$GRN" Install Wireshark"
+echo ""
+echo -e $WHITE" [  7. ]"$GRN" Install Aircrack-ng"$WHITE"                [  8. ]"$GRN" Install Nikto"
+echo ""
+echo -e $WHITE" [  9. ]"$GRN" Install John the Ripper"$WHITE"            [ 10. ]"$GRN" Install Dirb"
+echo ""
+echo -e $WHITE" [ 11. ]"$GRN" Install Gobuster"$WHITE"                   [ 12. ]"$GRN" Install Recon-ng"
+echo ""
+echo -e $WHITE" [ 13. ]"$GRN" Install sslyze"$WHITE"                     [ 14. ]"$GRN" Install Frida"
+echo ""
+echo -e $WHITE" [ 15. ]"$GRN" Install Burp Suite"$WHITE"                 [ 16. ]"$GRN" Install Dirbuster"
+echo ""
+echo -e $WHITE" [ 17. ]"$GRN" Install Wfuzz"$WHITE"                      [ 18. ]"$GRN" Install Hashcat"
+echo ""
+echo -e $WHITE" [ 19. ]"$GRN" Install CrackMapExec"$WHITE"               [ 20. ]"$GRN" Install Impacket"
+echo ""
+echo -e $WHITE" [  0. ]"$GRN" back to main menu"$WHITE"                  [ 00. ]"$GRN" Exit"
+echo ""
+}
+echo -e $RED ""
+
+
+# Get user input
+while true; do
+display_menu
+echo -e $RED""
+read -p "🔘 𝐄𝐧𝐭𝐞𝐫 𝐘𝐨𝐮𝐫 𝐂𝐡𝐨𝐢𝐜𝐞 : " choice
+
+
+# Execute the chosen function
+case $choice in
+
+    1) update_system ;;
+    2) install_nmap ;;
+    3) install_metasploit ;;
+    4) install_hydra ;;
+    5) install_sqlmap ;;
+    6) install_wireshark ;;
+    7) install_aircrack_ng ;;
+    8) install_nikto ;;
+    9) install_john ;;
+    10) install_dirb ;;
+    11) install_gobuster ;;
+    12) install_recon_ng ;;
+    13) install_sslyze ;;
+    14) install_frida ;;
+    15) install_burp_suite ;;
+    16) install_dirbuster ;;
+    17) install_wfuzz ;;
+    18) install_hashcat ;;
+    19) install_crackmapexec ;;
+    20) install_impacket ;;
+    0)  main_menu ;;
+    00) exit_tool ;;
+    *) echo -e $MAGENTA "Invalid choice. Please try again." ;;
+esac
+    echo -e $CYAN ""
+    read -p "𝐏ress 𝐄nter 𝐓o 𝐂ontinue..."
+    clear
+done
+
